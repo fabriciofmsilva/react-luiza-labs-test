@@ -1,0 +1,37 @@
+.result {
+  position: relative;
+  padding: 2rem;
+  border: 1px solid #bdc3c7;
+}
+
+.close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  font-size: 0;
+  color: #333;
+  background: none;
+  border: none;
+}
+
+.close:hover {
+  color: #000;
+  background: none;
+  border: none;
+}
+
+.close:before {
+  font-size: 1rem;
+  content: "X";
+}
+
+.address {
+  font-size: .9rem;
+  font-style: normal;
+}
+
+.address span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8;
+}

@@ -1,0 +1,16 @@
+.title {
+  margin: 0 0 .75rem 0;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  display: flex;
+}
+
+.form-group label {
+  margin-right: .5rem;
+}
+
+.form-group input {
+  margin-right: .5rem;
+}
