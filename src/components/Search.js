@@ -7,7 +7,7 @@ class Search extends Component {
       <div className="search">
         <h1 className="title">Consultar</h1>
         <div className="form-group">
-          <label for="search">CEP</label>
+          <label htmlFor="search">CEP</label>
           <input id="search" type="text" placeholder="02050010" />
           <button type="button">Buscar</button>
         </div>
