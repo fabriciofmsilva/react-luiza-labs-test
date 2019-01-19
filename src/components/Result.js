@@ -3,19 +3,23 @@ import './Result.css';
 
 class Result extends Component {
   render() {
+    const { props: { address } } = this;
+
     return (
-      <div className="result">
+      <div className="result" style={{ display: address ? 'block' : 'none' }}>
         <button type="button" className="close">Close</button>
 
         <address className="address">
-          <span>Rua Miguel Mentem</span><br />
-          Vila Guilherm<br />
-          São Paulo - SP<br />
-          02050-010
+          <span>{address && address.logradouro}</span><br />
+          {address && address.bairro}<br />
+          {address && `${address.localidade} - ${address.uf}`}<br />
+          {address && address.cep}
         </address>
         <div className="map">
           Map
         </div>
+
+        <pre></pre>
       </div>
     );
   }
