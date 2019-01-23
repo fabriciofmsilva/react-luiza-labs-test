@@ -1,6 +1,6 @@
 # Luiza Labs Test
 
-This project is made to Luiza Labs.
+This project is made to [Luiza Labs](http://fabriciofmsilva.com.br/react-luiza-labs-test/).
 
 ## Getting Started
 
@@ -39,6 +39,24 @@ You could run the unit tests using the following command.
 
 ```
 npm test or yarn start
+```
+
+## Deploy
+
+Change the `homepage` property into `package.json`, update `[your-user-name]` to your username
+
+```
+...
+  "private": true,
+  "homepage": "https://[your-user-name].github.io/react-luiza-labs-test/",
+  "dependencies": {
+...
+```
+
+After that run the command:
+
+```
+npm run deploy
 ```
 
 ## License
