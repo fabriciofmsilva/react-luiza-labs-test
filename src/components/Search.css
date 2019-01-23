@@ -14,3 +14,8 @@
 .form-group input {
   margin-right: .5rem;
 }
+
+.form-group input::placeholder {
+  color: #666;
+  font-style: italic;
+}

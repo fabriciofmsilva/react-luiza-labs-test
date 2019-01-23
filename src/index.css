@@ -30,6 +30,7 @@ input:focus {
 }
 
 button {
+  padding: .25rem 1rem;
   color: #fff;
   background-color: #2980b9;
   border: 1px solid #2980b9;

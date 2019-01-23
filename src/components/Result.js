@@ -3,12 +3,23 @@ import './Result.css';
 import SimpleMap from './Map';
 
 class Result extends Component {
+  handleClose = () => {
+    this.props.handleClose();
+  }
+
   render() {
     const { props: { address, location } } = this;
 
     return (
-      <div className="result" style={{ display: address ? 'block' : 'none' }}>
-        <button type="button" className="close">Close</button>
+      <div
+        className="result"
+        style={{ display: address ? 'block' : 'none' }}
+      >
+        <button
+          type="button"
+          className="close"
+          onClick={this.handleClose}
+        >Close</button>
 
         <address className="address">
           <span>{address && address.logradouro}</span><br />
@@ -19,8 +30,6 @@ class Result extends Component {
         <div className="map">
           {location ? <SimpleMap location={location} /> : 'error'}
         </div>
-
-        <pre></pre>
       </div>
     );
   }

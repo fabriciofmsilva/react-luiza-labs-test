@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import './Search.css';
 
 class Search extends Component {
-  handleSearchClick = () => {
+  handleSearch = () => {
     if (!this.validateSearch()) return;
-    this.props.handleSearchClick(this.search.value);
+    this.props.handleSearch(this.search.value.match(/\d+/g).join([]));
+    this.search.value = '';
   }
 
   validateSearch() {
-    return this.search.value.length === 8;
+    return this.search.value.length >= 8;
   }
 
   render() {
+    const { props: { value } } = this;
+
     return (
       <div className="search">
         <h1 className="title">Consultar</h1>
@@ -22,8 +25,9 @@ class Search extends Component {
             type="text"
             placeholder="02050010"
             ref={input => this.search = input}
+            value={value}
           />
-          <button type="button" onClick={this.handleSearchClick}>Buscar</button>
+          <button type="button" onClick={this.handleSearch}>Buscar</button>
         </div>
       </div>
     );

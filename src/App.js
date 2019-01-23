@@ -5,7 +5,6 @@ import Search from './components/Search';
 import Result from './components/Result';
 
 class App extends Component {
-
   constructor(props) {
     super(props);
 
@@ -14,7 +13,14 @@ class App extends Component {
     };
   }
 
-  async handleSearch(cep) {
+  handleClose = () => {
+    this.setState({
+        address: null,
+        location: null,
+    });
+  }
+
+  handleSearch = async (cep) => {
     const responseAddress = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
     const address = await responseAddress.json();
     const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address.gia}+${address.logradouro},+${address.city},+${address.uf}&key=AIzaSyAuf_OHJWTlUcpsMUV4yqi3TBeLq0JhVAU`);
@@ -28,7 +34,9 @@ class App extends Component {
       <div className="app">
         <header className="app-header">
           <div className="container">
-            <Search handleSearchClick={this.handleSearch.bind(this)}></Search>
+            <Search
+              handleSearch={this.handleSearch}
+            ></Search>
           </div>
         </header>
         <main className="app-main">
@@ -36,6 +44,7 @@ class App extends Component {
             <Result
               address={this.state.address}
               location={this.state.location}
+              handleClose={this.handleClose}
             ></Result>
           </div>
         </main>

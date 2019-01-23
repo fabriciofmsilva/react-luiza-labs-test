@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
+import pin from '../images/pin.svg';
+
 const Marker = ({ text }) => (
   <div style={{
     color: 'white',
-    backgroundImage: 'url(https://upload.wikimedia.org/wikipedia/commons/e/ed/Map_pin_icon.svg)',
+    backgroundImage: 'url(' + pin + ')',
     backgroundSize: 'contain',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -29,10 +31,8 @@ class SimpleMap extends Component {
 
   render() {
     const { props: { location } } = this;
-    console.log(location);
 
     return (
-      // Important! Always set the container height explicitly
       <div style={{ height: '400px', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyAuf_OHJWTlUcpsMUV4yqi3TBeLq0JhVAU' }}
