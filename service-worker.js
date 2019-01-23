@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/luiza-labs/precache-manifest.119b2a0ec3f4aa9cd4907c0e73d10c94.js"
+  "/react-luiza-labs-test/precache-manifest.47789743ae23671f1e647075b365ea5b.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/luiza-labs/index.html", {
+workbox.routing.registerNavigationRoute("/react-luiza-labs-test/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
