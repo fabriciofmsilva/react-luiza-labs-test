@@ -2,7 +2,7 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://fabriciofmsilva.github.io/luiza-labs",
+  "homepage": "http://fabriciofmsilva.com.br/react-luiza-labs-test",
   "dependencies": {
     "google-map-react": "^1.1.2",
     "google-maps-react": "^2.0.2",
@@ -29,6 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "enzyme": "^3.8.0"
+    "enzyme": "^3.8.0",
+    "gh-pages": "^2.0.1"
   }
 }

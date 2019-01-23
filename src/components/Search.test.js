@@ -1,9 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
 import Search from './Search';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Search />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe("Search", () => {
+  let props;
+  let mountedSearch;
+  const search = () => {
+    if (!mountedSearch) {
+      mountedSearch = mount(
+        <Search {...props} />
+      );
+    }
+    return mountedSearch;
+  }
+
+  beforeEach(() => {
+    props = {
+      wallpaperPath: undefined,
+      userInfoMessage: undefined,
+      onUnlocked: undefined,
+    };
+    mountedSearch = undefined;
+  });
+
+  it("always renders a div", () => {
+    const divs = search().find("div");
+    expect(divs.length).toBeGreaterThan(0);
+  });
 });
