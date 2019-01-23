@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './Result.css';
+import SimpleMap from './Map';
 
 class Result extends Component {
   render() {
-    const { props: { address } } = this;
+    const { props: { address, location } } = this;
 
     return (
       <div className="result" style={{ display: address ? 'block' : 'none' }}>
@@ -16,7 +17,7 @@ class Result extends Component {
           {address && address.cep}
         </address>
         <div className="map">
-          Map
+          {location ? <SimpleMap location={location} /> : 'error'}
         </div>
 
         <pre></pre>

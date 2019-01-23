@@ -14,11 +14,13 @@ class App extends Component {
     };
   }
 
-  handleSearch(cep) {
-    fetch(`https://viacep.com.br/ws/${cep}/json/`)
-      .then(response => response.json())
-      .then(address => this.setState({ address }))
-      .catch(error => console.error(error));
+  async handleSearch(cep) {
+    const responseAddress = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const address = await responseAddress.json();
+    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${address.gia}+${address.logradouro},+${address.city},+${address.uf}&key=AIzaSyAuf_OHJWTlUcpsMUV4yqi3TBeLq0JhVAU`);
+    const { results } = await response.json();
+    const location = results[0].geometry.location;
+    this.setState({ address, location });
   }
 
   render() {
@@ -33,6 +35,7 @@ class App extends Component {
           <div className="container">
             <Result
               address={this.state.address}
+              location={this.state.location}
             ></Result>
           </div>
         </main>
