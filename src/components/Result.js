@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Result.css';
-import SimpleMap from './Map';
+import Map from './Map';
 
 class Result extends Component {
   handleClose = () => {
@@ -28,7 +28,7 @@ class Result extends Component {
           {address && address.cep}
         </address>
         <div className="map">
-          {location ? <SimpleMap location={location} /> : 'error'}
+          {location ? <Map location={location} /> : 'error'}
         </div>
       </div>
     );

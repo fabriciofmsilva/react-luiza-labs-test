@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import GoogleMapReact from 'google-map-react';
 
 import pin from '../images/pin.svg';
@@ -20,7 +21,7 @@ const Marker = ({ text }) => (
   </div>
 );
 
-class SimpleMap extends Component {
+class Map extends Component {
   static defaultProps = {
     center: {
       lat: 59.95,
@@ -50,4 +51,8 @@ class SimpleMap extends Component {
   }
 }
 
-export default SimpleMap;
+Map.propTypes = {
+  location: PropTypes.object.isRequired,
+};
+
+export default Map;
