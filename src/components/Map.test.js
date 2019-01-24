@@ -1,10 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { mount } from 'enzyme';
 import Map from './Map';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  const location = { lat: 1, lng: 1 };
-  ReactDOM.render(<Map location={location} />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('Map', () => {
+  let props;
+  let mountedMap;
+  const map = () => {
+    if (!mountedMap) {
+      mountedMap = mount(
+        <Map {...props} />
+      );
+    }
+    return mountedMap;
+  }
+
+  beforeEach(() => {
+    props = {
+      location: {
+        lat: undefined,
+        lng: undefined,
+      },
+    };
+    mountedMap = undefined;
+  });
+
+  it('always renders a div', () => {
+    const divs = map().find('div');
+    expect(divs.length).toBeGreaterThan(0);
+  });
 });
