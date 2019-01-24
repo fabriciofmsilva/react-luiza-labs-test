@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3342deea6340ec4646b0",
-    "url": "/react-luiza-labs-test/static/css/main.37414d35.chunk.css"
+    "revision": "a9e79a08991623050d3f",
+    "url": "/react-luiza-labs-test/static/css/main.89d02f37.chunk.css"
   },
   {
-    "revision": "3342deea6340ec4646b0",
-    "url": "/react-luiza-labs-test/static/js/main.3342deea.chunk.js"
+    "revision": "a9e79a08991623050d3f",
+    "url": "/react-luiza-labs-test/static/js/main.a9e79a08.chunk.js"
   },
   {
     "revision": "2d375fca3d0d2fdbf14b",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/react-luiza-labs-test/static/media/pin.bbb83361.svg"
   },
   {
-    "revision": "b275c8777ec12682a8fb61e1082470c9",
+    "revision": "b7354095861114c3dd486698eb80af35",
     "url": "/react-luiza-labs-test/index.html"
   }
 ];
