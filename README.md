@@ -59,6 +59,12 @@ After that run the command:
 npm run deploy
 ```
 
+## TODO
+
+- [ ] Add unit tests
+- [ ] Improve the layout
+- [ ] Add enter event in the search input
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
