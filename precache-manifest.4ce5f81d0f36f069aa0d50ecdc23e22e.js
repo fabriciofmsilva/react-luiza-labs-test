@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/react-luiza-labs-test/static/media/pin.bbb83361.svg"
   },
   {
-    "revision": "b7354095861114c3dd486698eb80af35",
+    "revision": "bfcf1b6f711d7dd5cedc7cf96dab6166",
     "url": "/react-luiza-labs-test/index.html"
   }
 ];
